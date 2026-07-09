@@ -54,7 +54,9 @@ a él. Ver [Agradecimientos](#agradecimientos--créditos).
    Si el archivo ya existe y tiene otras líneas, simplemente añade esta al
    final; no borres el resto del contenido.
 
-4. Copia el user.cfg en tu carpeta live, para editar el idioma simplemente edita el fichero user.cfg y cambia spanish por catalan. 
+4. Copia el user.cfg en tu carpeta live. 
+
+6. Para jugar en catalán has de copiar el global.ini del catalán dentro de la carpeta spanish_(spain) y borrar el anterior global.ini. Esto sucede porque no es idioma oficial.
 
 5. Inicia el juego. El menú y los textos deberían aparecer en español.
 
