@@ -1,4 +1,4 @@
-# Star Citizen - Traducción al Español (con Blueprints/Recompensas)
+# Star Citizen - Traducción al Español/Catalán (con Blueprints/Recompensas)
 
 Traducción no oficial al español de Star Citizen que combina lo mejor de varios
 proyectos de traducción comunitaria con la información de **planos (blueprints)
@@ -54,7 +54,9 @@ a él. Ver [Agradecimientos](#agradecimientos--créditos).
    Si el archivo ya existe y tiene otras líneas, simplemente añade esta al
    final; no borres el resto del contenido.
 
-4. Inicia el juego. El menú y los textos deberían aparecer en español.
+4. Copia el user.cfg en tu carpeta live, para editar el idioma simplemente edita el fichero user.cfg y cambia spanish por catalan. 
+
+5. Inicia el juego. El menú y los textos deberían aparecer en español.
 
 ### ¿Sirve para PTU?
 
