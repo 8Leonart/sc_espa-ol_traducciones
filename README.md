@@ -78,6 +78,17 @@ rutinarias son rápidas y baratas. Para una reconstrucción completa desde cero
 (por ejemplo tras cambiar las reglas de prioridad/glosario), usa
 `tools/build.py` directamente.
 
+## Catalán
+
+Este proyecto también genera una versión en catalán
+(`data/Localization/catalan_(spain)/global.ini`), expandida a partir de
+nuestro propio `global.ini` en español. Para cada clave se usa, por este
+orden: la traducción ya existente en la
+[herramienta comunitaria sctranslator.danidomen.com](https://sctranslator.danidomen.com/edit/es_ca/global)
+(si la cubre), o si no una traducción automática generada por el mismo
+pipeline de subagentes. La instalación es idéntica a la de español, cambiando
+`spanish_(spain)` por `catalan_(spain)` en la ruta y en `g_language`.
+
 ## Metodología (resumen)
 
 1. Se usa `MrKraken/StarStrings` (inglés) como esqueleto para los contratos:
@@ -113,6 +124,9 @@ Este proyecto no existiría sin el trabajo de:
 - **0zzyt0** — ["STAR CITIZEN SPA TRANSLATION"](https://www.nexusmods.com/starcitizen/mods/43)
   en Nexus Mods (distribuido en `.zip`; mismo motivo de no incorporación
   automática que el punto anterior)
+- **Comunidad de [sctranslator.danidomen.com](https://sctranslator.danidomen.com/)**
+  — traducción español→catalán usada como fuente preferente para la versión
+  en catalán de este proyecto
 
 Si alguna atribución no es correcta o falta algún colaborador, abre un issue
 o contacta para corregirlo.
