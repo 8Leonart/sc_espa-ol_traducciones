@@ -68,20 +68,6 @@ y añade la misma línea `g_language = spanish_(spain)` a su `user.cfg`. Ten en
 cuenta que PTU cambia de contenido con frecuencia y esta traducción puede
 quedarse temporalmente desactualizada respecto a esa build.
 
-## Actualizaciones
-
-Este proyecto incluye una skill reutilizable, `/update-translations` (ver
-`.claude/skills/update-translations/`), que actualiza el `global.ini` de forma
-incremental: descarga solo los archivos `.ini` de origen (sin clonar los
-repos enteros), detecta qué claves faltan en el archivo actual y las resuelve
-en paralelo con un pequeño equipo de subagentes (`.claude/agents/`) — un
-Manager que planifica, un Scout que trae los archivos y fusiona el resultado,
-y varios Translators que traducen cada uno su propio lote. Las claves ya
-presentes en el archivo nunca se re-evalúan, así que las ejecuciones
-rutinarias son rápidas y baratas. Para una reconstrucción completa desde cero
-(por ejemplo tras cambiar las reglas de prioridad/glosario), usa
-`tools/build.py` directamente.
-
 ## Catalán
 
 Este proyecto también genera una versión en catalán
