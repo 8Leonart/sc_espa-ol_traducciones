@@ -1,5 +1,11 @@
 # Default ignored files
 .idea
 .claude
+# support files and folders (pipeline scripts, glossaries, canonical lists, scratch, caches, lessons)
 tools
+TRANSLATION_LESSONS.md
 CLAUDE.md
+graphify-out
+backup*
+todo_*.json
+__pycache__
