@@ -1,133 +1,102 @@
 # Star Citizen - Traducción al Español/Catalán (con Blueprints/Recompensas)
 
-Traducción no oficial al español de Star Citizen que combina lo mejor de varios
-proyectos de traducción comunitaria con la información de **planos (blueprints)
-y recompensas de contratos** que aporta [MrKraken/StarStrings](https://github.com/MrKraken/StarStrings)
-(en inglés), traducida íntegramente al castellano.
+Traducción no oficial de Star Citizen que combina varios proyectos comunitarios
+con los **planos (blueprints) y recompensas de contratos** de
+[MrKraken/StarStrings](https://github.com/MrKraken/StarStrings), todo traducido.
+Es un **trabajo derivado**: existe gracias a los equipos originales
+([créditos](#agradecimientos--créditos)).
 
-## ¿Qué aporta este proyecto?
+```mermaid
+flowchart LR
+    A[MrKraken StarStrings<br/>planos y recompensas] --> M{Fusión}
+    B[4 traducciones<br/>comunitarias ES] --> M
+    C[SCMDB<br/>datos de misiones] --> M
+    D[RSI / erkul<br/>nombres canónicos] --> M
+    M --> ES[global.ini<br/>español]
+    ES --> CA[global.ini<br/>catalán]
+    E[sctranslator.danidomen.com] --> CA
+```
 
-- **Base estructural**: [MrKraken/StarStrings](https://github.com/MrKraken/StarStrings),
-  que añade a las descripciones de contratos y misiones qué planos y recompensas
-  de reputación se pueden obtener al completarlos — información que ninguna
-  traducción española incluye actualmente.
-- **Máxima cobertura**: el resto de claves del juego (~93.000) se completan
-  combinando cuatro proyectos de traducción comunitaria, seleccionando para
-  cada línea la fuente más completa y de mejor calidad disponible.
-- **Huecos rellenados**: las claves que no existían en ninguna fuente española
-  (contenido nuevo del parche actual, o texto exclusivo de MrKraken) se han
-  traducido desde cero manteniendo la terminología y el tono del resto del
-  archivo.
-- **Trazabilidad**: se mantiene un log interno (no distribuido en el propio
-  `global.ini`) que indica de qué fuente proviene cada línea, para facilitar
-  el mantenimiento futuro.
+## Guía de uso rápido
 
-Este proyecto es un **trabajo derivado**. No pretende sustituir ni desmerecer
-el trabajo de ninguno de los equipos originales — al contrario, existe gracias
-a él. Ver [Agradecimientos](#agradecimientos--créditos).
+```mermaid
+flowchart LR
+    A[1. Code → Download ZIP<br/>en GitHub] --> B[2. Descomprime y abre<br/>sc_espa-ol_traducciones]
+    B --> C[3. Copia data + user.cfg<br/>dentro de StarCitizen\LIVE]
+    C --> D[4. Inicia el juego]
+```
 
-## Instalación
+> Si ya tienes un `user.cfg` propio, no lo reemplaces: añade solo la línea
+> `g_language = spanish_(spain)`.
 
-1. Descarga `global.ini` desde este repositorio (carpeta
-   `data/Localization/spanish_(spain)/global.ini`) o desde la última
-   [Release](../../releases) si el proyecto publica una.
-2. Copia el archivo a la carpeta de instalación de Star Citizen, dentro de
-   `LIVE` (créala si no existe la ruta completa):
+## Instalación manual
 
-   ```
-   [Ruta de instalación de Star Citizen]\LIVE\data\Localization\spanish_(spain)\global.ini
-   ```
+```mermaid
+flowchart TD
+    S([Inicio]) --> F[Copia global.ini a<br/>LIVE\data\Localization\spanish_spain\]
+    F --> U[Añade a LIVE\user.cfg:<br/>g_language = spanish_spain]
+    U --> L{¿Idioma?}
+    L -- Español --> G([Inicia el juego])
+    L -- Catalán --> K[Copia el global.ini catalán<br/>en la carpeta spanish_spain<br/>y borra el anterior]
+    K --> G
+    G --> P[PTU: mismo proceso en<br/>la carpeta PTU]
+```
 
-   Por ejemplo:
+Ruta de ejemplo:
+`C:\Program Files\Roberts Space Industries\StarCitizen\LIVE\data\Localization\spanish_(spain)\global.ini`
 
-   ```
-   C:\Program Files\Roberts Space Industries\StarCitizen\LIVE\data\Localization\spanish_(spain)\global.ini
-   ```
+El catalán (`data/Localization/catalan_(spain)/global.ini`) no es idioma
+oficial, por eso se instala dentro de la carpeta `spanish_(spain)`. PTU cambia
+a menudo y puede quedar desactualizada temporalmente.
 
-3. Edita (o crea) el archivo `user.cfg` en la raíz de `LIVE`
-   (`...\StarCitizen\LIVE\user.cfg`) y añade la línea:
+## Metodología
 
-   ```
-   g_language = spanish_(spain)
-   ```
+```mermaid
+flowchart TD
+    K[Cada clave] --> P{¿Traducción<br/>ES en alguna fuente?}
+    P -- Sí --> Q["Elige la mejor<br/>Doncasta1996 > Thord82 ><br/>SC-en-Espanol > Dymerz<br/>(salta placeholders y textos sin acentos)"]
+    P -- No --> T[Se traduce desde cero]
+    Q --> R[Cola de misión:<br/>reputación, planos,<br/>penalizaciones, puntos]
+    T --> R
+    R --> SC[SCMDB manda si hay discrepancia]
+    SC --> N[Nombres propios y términos<br/>técnicos se quedan en inglés]
+    N --> O[Ortografía, etiquetas EM<br/>y claves ES = CA]
+    O --> OUT([global.ini final])
+```
 
-   Si el archivo ya existe y tiene otras líneas, simplemente añade esta al
-   final; no borres el resto del contenido.
-
-4. Copia el user.cfg en tu carpeta live. 
-
-6. Para jugar en catalán has de copiar el global.ini del catalán dentro de la carpeta spanish_(spain) y borrar el anterior global.ini. Esto sucede porque no es idioma oficial.
-
-5. Inicia el juego. El menú y los textos deberían aparecer en español.
-
-### ¿Sirve para PTU?
-
-Sí. Copia el mismo `global.ini` en la carpeta equivalente de la build PTU
-(normalmente `...\StarCitizen\PTU\data\Localization\spanish_(spain)\global.ini`)
-y añade la misma línea `g_language = spanish_(spain)` a su `user.cfg`. Ten en
-cuenta que PTU cambia de contenido con frecuencia y esta traducción puede
-quedarse temporalmente desactualizada respecto a esa build.
+| Regla | Resumen |
+|---|---|
+| Recompensas | Fuente maestra [SCMDB](https://scmdb.net); eventos sin reputación (`iasi_*`) solo muestran puntos |
+| Formato de misión | Título: `<EM4>[N Rep] [BP]</EM4>`; descripción termina en reputación / planos / penalizaciones |
+| Nombres | Marcas, naves, objetos, lugares, facciones y personajes en inglés; solo se traducen descriptores (`Pintura <Nave> <Nombre>`) |
+| Términos técnicos | HUD, HOTAS, Gimbal, TrackIR, FOIP, IFCS… sin traducir |
+| Puntuación | Español con tildes y `¿ ¡`; catalán sin `¿ ¡` |
+| Actualizaciones | Solo se añaden claves nuevas; después pasan las comprobaciones finales |
 
 ## Catalán
 
-Este proyecto también genera una versión en catalán
-(`data/Localization/catalan_(spain)/global.ini`), expandida a partir de
-nuestro propio `global.ini` en español. Para cada clave se usa, por este
-orden: la traducción ya existente en la
-[herramienta comunitaria sctranslator.danidomen.com](https://sctranslator.danidomen.com/edit/es_ca/global)
-(si la cubre), o si no una traducción automática generada por el mismo
-pipeline de subagentes. La instalación es idéntica a la de español, cambiando
-`spanish_(spain)` por `catalan_(spain)` en la ruta y en `g_language`.
-
-## Metodología (resumen)
-
-1. Se usa `MrKraken/StarStrings` (inglés) como esqueleto para los contratos:
-   aporta la estructura y el contenido extra de planos/recompensas.
-2. Para cada clave, se compara su traducción en las cuatro fuentes españolas
-   y se elige la de mejor calidad, con este orden de prioridad por defecto:
-   Doncasta1996 > Thord82 > SC-en-Espanol > Dymerz — salvo que una fuente
-   tenga una traducción claramente mejor o más actual para esa línea concreta
-   (p. ej. si la de mayor prioridad es un placeholder sin traducir).
-3. El contenido añadido por MrKraken respecto al texto vanilla (recompensas de
-   reputación, planos potenciales, puntos de progreso de escenario, etc.) se
-   traduce y se añade a la traducción española ya existente de la base.
-4. Las claves sin ninguna traducción española se traducen desde cero,
-   manteniendo terminología, tono y marcadores (`<EM4>`, `~mission(...)`, etc.)
-   consistentes con el resto del archivo.
+Se genera a partir del `global.ini` español. Por clave se usa, en orden: la
+traducción de [sctranslator.danidomen.com](https://sctranslator.danidomen.com/edit/es_ca/global)
+o, si falta, traducción automática del pipeline.
 
 ## Agradecimientos / Créditos
 
-Este proyecto no existiría sin el trabajo de:
-
-- **MrKraken** — [StarStrings](https://github.com/MrKraken/StarStrings)
-  (estructura base en inglés y datos de planos/recompensas de contratos)
-- **Jose_Pacheco** y colaboradores (Autovot, JimmyVaras, Keiran, Mornack,
-  Speler, ZettaZ) — [Doncasta1996/Star-Citizen-Spanish](https://github.com/Doncasta1996/Star-Citizen-Spanish)
+- **MrKraken** — [StarStrings](https://github.com/MrKraken/StarStrings) (base en inglés y datos de planos/recompensas)
+- **Jose_Pacheco** y colaboradores (Autovot, JimmyVaras, Keiran, Mornack, Speler, ZettaZ) — [Doncasta1996/Star-Citizen-Spanish](https://github.com/Doncasta1996/Star-Citizen-Spanish)
 - **Thord82** y equipo Osiris-DevWorks/smart-citizen — [Thord82/Star_citizen_ES](https://github.com/Thord82/Star_citizen_ES)
-- **Autovot, Keiran, Sπeler, ZettaZ, Doncasta1996, JimmyVaras, Jota_be,
-  juancmontes, 0zzyt0, Mornack** — [SC-en-Espanol/StarCitizen-Localization-Spanish](https://github.com/SC-en-Espanol/StarCitizen-Localization-Spanish)
+- **Autovot, Keiran, Sπeler, ZettaZ, Doncasta1996, JimmyVaras, Jota_be, juancmontes, 0zzyt0, Mornack** — [SC-en-Espanol/StarCitizen-Localization-Spanish](https://github.com/SC-en-Espanol/StarCitizen-Localization-Spanish)
 - **Dymerz** — [Dymerz/StarCitizen-Localization](https://github.com/Dymerz/StarCitizen-Localization)
-- **JotaBe1 (Jota_be)** — [JotaBe1/StarCitizen_ESP](https://github.com/JotaBe1/StarCitizen_ESP)
-  (distribuido en `.rar` vía Releases; no incorporado automáticamente en esta
-  versión por falta de herramientas de extracción en el entorno de
-  generación — revisa su repositorio directamente si quieres comparar)
-- **0zzyt0** — ["STAR CITIZEN SPA TRANSLATION"](https://www.nexusmods.com/starcitizen/mods/43)
-  en Nexus Mods (distribuido en `.zip`; mismo motivo de no incorporación
-  automática que el punto anterior)
-- **Comunidad de [sctranslator.danidomen.com](https://sctranslator.danidomen.com/)**
-  — traducción español→catalán usada como fuente preferente para la versión
-  en catalán de este proyecto
+- **Comunidad de [sctranslator.danidomen.com](https://sctranslator.danidomen.com/)** — traducción español→catalán
+- **[SCMDB](https://scmdb.net)** — recompensas, planos, penalizaciones y puntos de misiones
+- **[Ship Matrix de RSI](https://robertsspaceindustries.com/ship-matrix/index)** y **[erkul.games](https://www.erkul.games)** — nombres canónicos de naves, fabricantes y componentes
 
-Si alguna atribución no es correcta o falta algún colaborador, abre un issue
-o contacta para corregirlo.
+Si falta alguna atribución, abre un issue para corregirlo.
 
 ## Aviso legal
 
-Este es un proyecto de fans **no oficial**, sin afiliación con Cloud Imperium
-Games, Roberts Space Industries ni ninguna de sus filiales. "Star Citizen",
-todos los nombres de naves, organizaciones, sistemas y demás contenido
-original del juego son marcas y propiedad de sus respectivos dueños. Este
-repositorio se distribuye únicamente con fines de traducción/localización
+Proyecto de fans **no oficial**, sin afiliación con Cloud Imperium Games ni
+Roberts Space Industries. "Star Citizen" y todo su contenido original son
+marcas de sus respectivos dueños. Se distribuye solo con fines de localización
 comunitaria, al amparo de la
 [política de localización de la comunidad de CIG](https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/star-citizen-community-localization-update).
 Úsalo bajo tu propio criterio.
