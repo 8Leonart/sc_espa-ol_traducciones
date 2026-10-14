@@ -1,22 +1,5 @@
 # Star Citizen - Traducción al Español/Catalán (con Blueprints/Recompensas)
 
-Traducción no oficial de Star Citizen que combina varios proyectos comunitarios
-con los **planos (blueprints) y recompensas de contratos** de
-[MrKraken/StarStrings](https://github.com/MrKraken/StarStrings), todo traducido.
-Es un **trabajo derivado**: existe gracias a los equipos originales
-([créditos](#agradecimientos--créditos)).
-
-```mermaid
-flowchart LR
-    A[MrKraken StarStrings<br/>planos y recompensas] --> M{Fusión}
-    B[4 traducciones<br/>comunitarias ES] --> M
-    C[SCMDB<br/>datos de misiones] --> M
-    D[RSI / erkul<br/>nombres canónicos] --> M
-    M --> ES[global.ini<br/>español]
-    ES --> CA[global.ini<br/>catalán]
-    E[sctranslator.danidomen.com] --> CA
-```
-
 ## Guía de uso rápido
 
 ```mermaid
@@ -48,6 +31,25 @@ Ruta de ejemplo:
 El catalán (`data/Localization/catalan_(spain)/global.ini`) no es idioma
 oficial, por eso se instala dentro de la carpeta `spanish_(spain)`. PTU cambia
 a menudo y puede quedar desactualizada temporalmente.
+
+## Qué es este proyecto
+
+Traducción no oficial de Star Citizen que combina varios proyectos comunitarios
+con los **planos (blueprints) y recompensas de contratos** de
+[MrKraken/StarStrings](https://github.com/MrKraken/StarStrings), todo traducido.
+Es un **trabajo derivado**: existe gracias a los equipos originales
+([créditos](#agradecimientos--créditos)).
+
+```mermaid
+flowchart LR
+    A[MrKraken StarStrings<br/>planos y recompensas] --> M{Fusión}
+    B[4 traducciones<br/>comunitarias ES] --> M
+    C[SCMDB<br/>datos de misiones] --> M
+    D[RSI / erkul<br/>nombres canónicos] --> M
+    M --> ES[global.ini<br/>español]
+    ES --> CA[global.ini<br/>catalán]
+    E[sctranslator.danidomen.com] --> CA
+```
 
 ## Metodología
 
