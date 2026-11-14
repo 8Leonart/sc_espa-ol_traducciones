@@ -6,6 +6,21 @@ HUD, contratos), más **planos (blueprints), reputación y recompensas de
 misiones** en cada contrato. Incluye también **traducción al catalán**.
 Instalación en 1 minuto: copia la carpeta `data` y `user.cfg` en `StarCitizen\LIVE`.
 
+[![Descargar traducción](https://img.shields.io/badge/Descargar-ZIP-brightgreen?style=for-the-badge)](https://github.com/8Leonart/star-citizen-traduccion-espanol/archive/refs/heads/main.zip)
+![Idiomas](https://img.shields.io/badge/idioma-Espa%C3%B1ol%20%7C%20Catal%C3%A0-blue)
+![Juego](https://img.shields.io/badge/Star%20Citizen-LIVE%20%2B%20PTU-orange)
+[![Licencia](https://img.shields.io/github/license/8Leonart/star-citizen-traduccion-espanol)](LICENSE)
+[![Último commit](https://img.shields.io/github/last-commit/8Leonart/star-citizen-traduccion-espanol)](../../commits/main)
+[![Estrellas](https://img.shields.io/github/stars/8Leonart/star-citizen-traduccion-espanol?style=social)](../../stargazers)
+
+**[⬇️ Descargar la traducción (ZIP)](https://github.com/8Leonart/star-citizen-traduccion-espanol/archive/refs/heads/main.zip)** ·
+[Ver archivo español](data/Localization/spanish_(spain)/global.ini) ·
+[Ver archivo catalán](data/Localization/catalan_(spain)/global.ini) ·
+[Reportar un error](../../issues)
+
+Si te resulta útil, **dale una ⭐ al repositorio**: ayuda a que más jugadores
+hispanohablantes lo encuentren.
+
 > **English:** Unofficial **Star Citizen Spanish (Spain) + Catalan localization
 > pack** (`global.ini`) with mission reputation, blueprint and reward info baked
 > into contract descriptions (merged from StarStrings, community translations and
@@ -32,7 +47,7 @@ Nexus Mods / Dymerz / Doncasta1996 / Thord82 · SCMDB.
 
 ```mermaid
 flowchart LR
-    A[1. Code → Download ZIP<br/>en GitHub] --> B[2. Descomprime y abre<br/>sc_espa-ol_traducciones]
+    A[1. Code → Download ZIP<br/>en GitHub] --> B[2. Descomprime y abre<br/>star-citizen-traduccion-espanol-main]
     B --> C[3. Copia data + user.cfg<br/>dentro de StarCitizen\LIVE]
     C --> D[4. Inicia el juego]
 ```
@@ -151,6 +166,15 @@ cliente del juego.
 
 **¿Cómo reporto un error de traducción?**
 Abre un [issue](../../issues) con la clave y el texto correcto.
+
+## Cómo contribuir
+
+- Encuentras un texto mal traducido o en inglés: abre un [issue](../../issues) con
+  la clave (`nombre_clave`) y la corrección.
+- Las traducciones se actualizan con cada parche de Star Citizen; si falta algo
+  tras una actualización, avísanos en los issues.
+- Comparte el repositorio en tu comunidad (Reddit, Discord, Spectrum) para que
+  más jugadores en español lo encuentren.
 
 ## Agradecimientos / Créditos
 
