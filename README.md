@@ -157,7 +157,7 @@ Abre un [issue](../../issues) con la clave y el texto correcto.
 - **MrKraken** — [StarStrings](https://github.com/MrKraken/StarStrings) (base en inglés y datos de planos/recompensas)
 - **Jose_Pacheco** y colaboradores (Autovot, JimmyVaras, Keiran, Mornack, Speler, ZettaZ) — [Doncasta1996/Star-Citizen-Spanish](https://github.com/Doncasta1996/Star-Citizen-Spanish)
 - **Thord82** y equipo Osiris-DevWorks/smart-citizen — [Thord82/Star_citizen_ES](https://github.com/Thord82/Star_citizen_ES)
-- **Autovot, Keiran, Sπeler, ZettaZ, Doncasta1996, JimmyVaras, Jota_be, juancmontes, 0zzyt0, Mornack** — [SC-en-Espanol/StarCitizen-Localization-Spanish](https://github.com/SC-en-Espanol/StarCitizen-Localization-Spanish)
+- **Autovot, Keiran, Sπeler, ZettaZ, Doncasta1996, JimmyVaras, juancmontes, Mornack** — [SC-en-Espanol/StarCitizen-Localization-Spanish](https://github.com/SC-en-Espanol/StarCitizen-Localization-Spanish)
 - **Dymerz** — [Dymerz/StarCitizen-Localization](https://github.com/Dymerz/StarCitizen-Localization)
 - **Comunidad de [sctranslator.danidomen.com](https://sctranslator.danidomen.com/)** — traducción español→catalán
 - **[SCMDB](https://scmdb.net)** — recompensas, planos, penalizaciones y puntos de misiones
