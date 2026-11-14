@@ -1,4 +1,32 @@
-# Star Citizen - Traducción al Español/Catalán (con Blueprints/Recompensas)
+# Star Citizen en Español (España) y Catalán — `global.ini` traducido con planos y recompensas
+
+**Traducción al español de Star Citizen (LIVE y PTU)**: un único archivo
+`global.ini` con **~90.000 textos traducidos** (menús, misiones, objetos, naves,
+HUD, contratos), más **planos (blueprints), reputación y recompensas de
+misiones** en cada contrato. Incluye también **traducción al catalán**.
+Instalación en 1 minuto: copia la carpeta `data` y `user.cfg` en `StarCitizen\LIVE`.
+
+> **English:** Unofficial **Star Citizen Spanish (Spain) + Catalan localization
+> pack** (`global.ini`) with mission reputation, blueprint and reward info baked
+> into contract descriptions (merged from StarStrings, community translations and
+> SCMDB data). Download the ZIP, copy `data` and `user.cfg` into your
+> `StarCitizen\LIVE` folder, play in Spanish.
+
+**Búsquedas que cubre este proyecto:** Star Citizen en español · traducción de
+Star Citizen al español · Star Citizen castellano · parche / mod de idioma español
+para Star Citizen · descargar `global.ini` español · `spanish_(spain)` ·
+`g_language = spanish_(spain)` · `user.cfg` idioma · Star Citizen español España y
+Latinoamérica · Star Citizen Spanish translation / localization / language pack ·
+Star Citizen català (català) · traducción 4.x LIVE y PTU · planos (blueprints),
+reputación y recompensas de contratos · StarStrings en español · alternativa a
+Nexus Mods / Dymerz / Doncasta1996 / Thord82 · SCMDB.
+
+## Índice
+
+[Guía de uso rápido](#guía-de-uso-rápido) · [Instalación manual](#instalación-manual) ·
+[Qué incluye](#qué-es-este-proyecto) · [Metodología](#metodología) ·
+[Catalán](#catalán) · [Preguntas frecuentes](#preguntas-frecuentes) ·
+[Créditos](#agradecimientos--créditos)
 
 ## Guía de uso rápido
 
@@ -80,6 +108,49 @@ flowchart TD
 Se genera a partir del `global.ini` español. Por clave se usa, en orden: la
 traducción de [sctranslator.danidomen.com](https://sctranslator.danidomen.com/edit/es_ca/global)
 o, si falta, traducción automática del pipeline.
+
+## Preguntas frecuentes
+
+**¿Cómo pongo Star Citizen en español?**
+Descarga el repositorio (Code → Download ZIP), copia la carpeta `data` y el
+`user.cfg` dentro de `StarCitizen\LIVE` y arranca el juego. El `user.cfg` solo
+necesita `g_language = spanish_(spain)`.
+
+**¿Funciona con la versión LIVE actual y con PTU?**
+Sí. Se actualiza con cada parche añadiendo las claves nuevas; en PTU puede ir
+con algo de retraso.
+
+**¿Hay traducción al catalán de Star Citizen?**
+Sí: `data/Localization/catalan_(spain)/global.ini` (se instala en la carpeta
+`spanish_(spain)`, ver [Catalán](#catalán)).
+
+**¿Qué aporta frente a otras traducciones al español?**
+Fusiona las mejores traducciones comunitarias y añade, en cada misión, la
+reputación, los planos que pueden dar y las penalizaciones, validados con SCMDB.
+
+**¿Puedo ser baneado por usarlo?**
+Es el mecanismo oficial de localización comunitaria de CIG (`user.cfg` +
+`global.ini`), sin modificar el cliente.
+
+**¿Sirve para Latinoamérica (español latino)?**
+Sí: el juego lo carga como `spanish_(spain)`, así que cualquier jugador
+hispanohablante puede usarlo. El texto está en español neutro/castellano.
+
+**¿Dónde se pone el `global.ini` de Star Citizen?**
+En `StarCitizen\LIVE\data\Localization\spanish_(spain)\global.ini`, y en
+`LIVE\user.cfg` la línea `g_language = spanish_(spain)`.
+
+**¿Por qué aparecen textos en inglés o `@clave` en el juego?**
+Porque el juego solo carga un `global.ini`: si falta una clave se ve en inglés o
+como `@nombre`. Este paquete fusiona varias traducciones para cubrir todas las
+claves, y se actualiza con cada parche.
+
+**¿Es un mod, un parche o una traducción oficial?**
+Es una traducción comunitaria no oficial (un "language pack"), no modifica el
+cliente del juego.
+
+**¿Cómo reporto un error de traducción?**
+Abre un [issue](../../issues) con la clave y el texto correcto.
 
 ## Agradecimientos / Créditos
 
