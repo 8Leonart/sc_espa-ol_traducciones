@@ -16,7 +16,9 @@ Instalación en 1 minuto: copia la carpeta `data` y `user.cfg` en `StarCitizen\L
 **[⬇️ Descargar la traducción (ZIP)](https://github.com/8Leonart/star-citizen-traduccion-espanol/archive/refs/heads/main.zip)** ·
 [Ver archivo español](data/Localization/spanish_(spain)/global.ini) ·
 [Ver archivo catalán](data/Localization/catalan_(spain)/global.ini) ·
-[Reportar un error](../../issues)
+[Reportar un error](../../issues) ·
+[Web del proyecto](https://8leonart.github.io/star-citizen-traduccion-espanol/) ·
+[Releases](../../releases)
 
 Si te resulta útil, **dale una ⭐ al repositorio**: ayuda a que más jugadores
 hispanohablantes lo encuentren.
